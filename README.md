@@ -34,4 +34,16 @@ when deploy run this comment (`env npm_config_arch=x64 npm_config_platform=linux
   - `API GATEWAY` => `select your apigate way (api you connect with lambda)` => `setting` => `Binary Media Types` => add `multipart/form-data`,`image/jpeg`,...
  ![alt text](images/setting_binary.png "Binary Media Type")
 
+ ### III./ S3
+ - create bucket with public access (ACL)
+ - create web static web  
+ - add config in web static redicrect api gate way if not found in s3
 
+RESOURCE:
+https://aws.amazon.com/vi/blogs/compute/resize-images-on-the-fly-with-amazon-s3-aws-lambda-and-amazon-api-gateway/
+
+ https://dev.to/adnanrahic/a-crash-course-on-serverless-with-aws---image-resize-on-the-fly-with-lambda-and-s3-4foo
+            https://medium.com/think-serverless/image-upload-and-retrieval-from-s3-using-aws-api-gateway-and-lambda-b4c2961e8d1
+            NOTE: remember add binary media types with images 
+* Resource: https://viblo.asia/p/cloudwatch-vs-zabbix-phan-1-7eEREJxVMgNj
+* Create scheduler CloudeWatch to S3: https://docs.aws.amazon.com/en_us/AmazonCloudWatch/latest/logs/S3ExportTasks.html
