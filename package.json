@@ -1,0 +1,20 @@
+{
+  "name": "upload-images",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.local",
+    "zip": "rm -rf ./node_modules lambda.zip && npm install && env npm_config_platform=linux npm_config_target=8.10.0 npm install --save sharp &&  zip -r -X lambda.zip app.js aws-config.json helper.js index.js route.js constants.js node_modules/ "
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1.17",
+    "aws-serverless-express": "^3.3.5",
+    "express": "^4.12.2",
+    "multer": "^0.1.8",
+    "sharp": "^0.21.0",
+    "smartcrop-sharp": "^2.0.3"
+  },
+  "author": "Phong Bui",
+  "license": "BSD"
+}
